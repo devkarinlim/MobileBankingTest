@@ -43,6 +43,7 @@
 		EEDEB2CF27DE3DA500B8CEAB /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */; };
 		EEDEB2D027DE3DA500B8CEAB /* TransactionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */; };
 		EEDEB2D227DE41B800B8CEAB /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */; };
+		EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
 		EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailCell.xib; sourceTree = "<group>"; };
 		EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				EE274FFB27DDD0740057319A /* AlertHelper.swift */,
 				EE274FD127DD8B220057319A /* Spinner.swift */,
 				EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */,
+				EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				EE274FD227DD8B220057319A /* Spinner.swift in Sources */,
 				EE274FD027DD89A40057319A /* BalanceModel.swift in Sources */,
 				EE274F6B27DC542F0057319A /* AppDelegate.swift in Sources */,
+				EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */,
 				EE27500527DDE3060057319A /* TransactionCell.swift in Sources */,
 				EE274FF727DDCC4C0057319A /* AccountModel.swift in Sources */,
 				EE274FCA27DCD5870057319A /* AuthenticationModel.swift in Sources */,

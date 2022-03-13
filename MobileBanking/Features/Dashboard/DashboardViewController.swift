@@ -25,8 +25,14 @@ class DashboardViewController: UIViewController {
         setupBalanceCard()
         fetchBalance()
         fetchTransactions()
+        setupTransferBtn()
         
         // Do any additional setup after loading the view.
+    }
+    
+    func setupTransferBtn(){
+        transferBtn.setRoundedRed()
+        transferBtn.setTitle("MAKE TRANSFER", for: .normal)
     }
     
     override func viewDidLayoutSubviews() {
@@ -69,8 +75,9 @@ class DashboardViewController: UIViewController {
     
     func setupNavBar(){
         navigationItem.hidesBackButton = true
-        let logOutBtn = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutTapped))
+        let logOutBtn = UIBarButtonItem(title: "LOGOUT", style: .done, target: self, action: #selector(logoutTapped))
         navigationItem.setRightBarButton(logOutBtn, animated: true)
+        navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
     @objc func logoutTapped(){
@@ -93,7 +100,7 @@ class DashboardViewController: UIViewController {
         var results: [TransactionPerDate] = []
         datas.forEach { data in
             let dateString = DateHelper.getFormattedDate(dateString: data.transactionDate, format: "dd MMM yyyy")
-            if var idx = results.firstIndex(where: {$0.formattedDate == dateString}){
+            if let idx = results.firstIndex(where: {$0.formattedDate == dateString}){
                 results[idx].detail.append(data)
             }
             else{

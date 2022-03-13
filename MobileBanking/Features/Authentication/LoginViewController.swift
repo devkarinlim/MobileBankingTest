@@ -25,6 +25,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         UserDefaults.standard.removeObject(forKey: UserDefaultKey.AUTH_TOKEN)
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.USERNAME)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,6 +38,7 @@ class LoginViewController: UIViewController {
         setupHeader()
         setupForm()
         setupLoginBtn()
+        setupRegistrationBtn()
         initializeHideKeyboard()
         testInput()
     }
@@ -50,10 +52,12 @@ class LoginViewController: UIViewController {
         usernameField.delegate = self
         passwordField.delegate = self
         usernameField.textContentType = .oneTimeCode
+        usernameField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         usernameField.tag = 1
         passwordField.tag = 2
         passwordField.isSecureTextEntry = true
         passwordField.textContentType = .oneTimeCode
+        passwordField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         clearValidLabels()
     }
     
@@ -70,22 +74,20 @@ class LoginViewController: UIViewController {
     }
     
     func setupLoginBtn(){
-        loginBtn.tintColor = .white
-        loginBtn.backgroundColor = .red
-        loginBtn.layer.cornerRadius = loginBtn.frame.height/5
+        loginBtn.setRoundedRed()
         loginBtn.setTitle(pageTitle, for: .normal)
-//        loginBtn.layer.padding = loginBtn.frame.height/5
     }
     
     func setupRegistrationBtn(){
-        
+        registBtn.setRoundedBorderRed()
+        registBtn.setTitle("REGISTRATION", for: .normal)
     }
     
     func setupHeader(){
         if let iconImage = UIImage(named: "logo_transparent"){
             imageView.image = iconImage
         }
-        titleLabel.text = pageTitle
+        titleLabel.text = pageTitle.capitalized
     }
 
     @IBAction func loginBtnTapped(_ sender: Any) {
@@ -155,3 +157,4 @@ extension LoginViewController: UITextFieldDelegate{
     
     
 }
+
