@@ -13,6 +13,7 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var transactionContainerView: UIView!
     @IBOutlet weak var transferBtn: UIButton!
     @IBOutlet weak var balanceCardView: BalanceCard!
+    @IBOutlet weak var tableView: UITableView!
     
     var balance: BalanceData?
     var transactionsPerDate: [TransactionPerDate] = []
@@ -20,19 +21,32 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-        setupCollectionView()
+//        setupCollectionView()
         setupTransactionContainer()
         setupBalanceCard()
         fetchBalance()
         fetchTransactions()
         setupTransferBtn()
-        
+        setupTableView()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupTableView(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "TransactionDetailCell", bundle: nil), forCellReuseIdentifier: "TransactionDetailCell")
+        tableView.backgroundColor = .clear
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 16
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func setupTransferBtn(){
         transferBtn.setRoundedRed()
         transferBtn.setTitle("MAKE TRANSFER", for: .normal)
+        transferBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -32).isActive = true
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,25 +55,16 @@ class DashboardViewController: UIViewController {
     
     func setupTransactionContainer(){
         transactionContainerView.layer.masksToBounds = false
-        transactionContainerView.layer.cornerRadius = transactionContainerView.frame.width/8
+        transactionContainerView.layer.cornerRadius = 28
         transactionContainerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        transactionContainerView.backgroundColor = UIColor(displayP3Red: 255 , green: 255, blue: 255, alpha: 0.8)
     }
     
     func setupBalanceCard(){
         balanceCardView.backgroundColor = .clear
-//        balanceCardView.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -16).isActive = true
+        balanceCardView.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: -16).isActive = true
         balanceCardView.bottomAnchor.constraint(equalTo: transactionContainerView.topAnchor, constant: 32).isActive = true
-        balanceCardView.containerView.sizeToFit()
 //        balanceCardView.containerView.frame = balanceCardView.frame
-    }
-    
-    
-    func setupCollectionView(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.collectionViewLayout = createLayout()
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 24, bottom: 0, right: 24)
-        collectionView.register(UINib(nibName: "TransactionCell", bundle: .main), forCellWithReuseIdentifier: "TransactionCell")
     }
     
     func createLayout()->UICollectionViewLayout{
@@ -88,7 +93,7 @@ class DashboardViewController: UIViewController {
         TransactionApi.getAllTransactions { datas in
             DispatchQueue.main.async {
                 self.transactionsPerDate = self.groupPerDate(datas: datas)
-                self.collectionView.reloadData()
+                self.tableView.reloadData()
             }
         } failCompletion: { error in
             AlertHelper.shared.showError(title: "Transactions Error", message: error, sender: self)
@@ -122,29 +127,31 @@ class DashboardViewController: UIViewController {
         } failCompletion: { error in
             AlertHelper.shared.showError(title: "Balance Error", message: error, sender: self)
         }
-        
     }
-    
-    
 }
 
-extension DashboardViewController : UICollectionViewDataSource{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension DashboardViewController : UITableViewDataSource{
+    func numberOfSections(in tableView: UITableView) -> Int {
         return transactionsPerDate.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
-        let dataPerDate = transactionsPerDate[indexPath.row]
-        cell.setupData(transactionPerDate: dataPerDate)
-        cell.setNeedsLayout()
-        cell.layoutIfNeeded()
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return transactionsPerDate[section].detail.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TransactionDetailCell", for: indexPath) as! TransactionDetailCell
+        let dataPerDate = transactionsPerDate[indexPath.section]
+        cell.setupData(detail: dataPerDate.detail[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return transactionsPerDate[section].formattedDate
+    }
+    
 }
 
-extension DashboardViewController : UICollectionViewDelegate{
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-       
-    }
+extension DashboardViewController : UITableViewDelegate{
+    
 }
