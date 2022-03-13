@@ -24,8 +24,8 @@ class TransactionCell: UICollectionViewCell {
     
     func setupCellStyle(){
         containerView.layer.masksToBounds = false
-        containerView.layer.cornerRadius = frame.width/8
-        containerView.layer.borderWidth = 2
+        containerView.layer.cornerRadius = 24
+        containerView.layer.borderWidth = 1
         containerView.layer.borderColor = UIColor.red.cgColor
     }
     
@@ -33,13 +33,15 @@ class TransactionCell: UICollectionViewCell {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "TransactionDetailCell", bundle: nil), forCellReuseIdentifier: "TransactionDetailCell")
+        //        tableView.rowHeight = UITableView.automaticDimension
+        tableView.backgroundColor = .darkGray
     }
     
     func setupData(transactionPerDate: TransactionPerDate){
         self.transactionPerDate = transactionPerDate
         tableView.reloadData()
     }
-
+    
 }
 
 extension TransactionCell: UITableViewDelegate{

@@ -34,13 +34,17 @@ class BalanceCard: UIView {
         
 //        containerView.translatesAutoresizingMaskIntoConstraints = true
         containerView.layer.cornerRadius = 24
-//        containerView.bottomAnchor.constraint(equalTo: self.bounds, constant: 0).isActive = true
-//        containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-//        containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//        containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         containerView.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
         
         addSubview(containerView)
+        
+        containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+        
+        accountHolderValue.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16).isActive = true
+        
     }
     
     private func setupBorderedCornerdView(view: UIView){

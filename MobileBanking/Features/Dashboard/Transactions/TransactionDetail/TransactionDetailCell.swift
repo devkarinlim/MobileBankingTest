@@ -18,6 +18,9 @@ class TransactionDetailCell: UITableViewCell {
         super.awakeFromNib()
         
     }
+    
+    func setupContraints(){
+    }
 
     func setupData(detail: TransactionData){
         let amount = String(format: "%.2f", detail.amount)
