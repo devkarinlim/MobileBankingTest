@@ -155,7 +155,6 @@
 			children = (
 				EE274FC227DCB67E0057319A /* Model */,
 				EE274FBA27DC67F20057319A /* Helper */,
-				EE274F9C27DC641B0057319A /* Component */,
 				EE274F9B27DC64110057319A /* Services */,
 				EE274F9A27DC63F60057319A /* Features */,
 				EE274F6A27DC542F0057319A /* AppDelegate.swift */,
@@ -189,7 +188,6 @@
 		EE274F9A27DC63F60057319A /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				EE274FB527DC66C70057319A /* Transfer */,
 				EE274FB427DC66BE0057319A /* Dashboard */,
 				EE274FA727DC65D30057319A /* Authentication */,
 			);
@@ -206,13 +204,6 @@
 				EE274FA527DC659D0057319A /* TransferApi.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		EE274F9C27DC641B0057319A /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		EE274FA727DC65D30057319A /* Authentication */ = {
@@ -235,13 +226,6 @@
 				EE274FDB27DD99570057319A /* DashboardViewController.swift */,
 			);
 			path = Dashboard;
-			sourceTree = "<group>";
-		};
-		EE274FB527DC66C70057319A /* Transfer */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Transfer;
 			sourceTree = "<group>";
 		};
 		EE274FBA27DC67F20057319A /* Helper */ = {
