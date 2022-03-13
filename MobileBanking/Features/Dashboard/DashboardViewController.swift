@@ -41,7 +41,10 @@ class DashboardViewController: UIViewController {
     
     func setupBalanceCard(){
         balanceCardView.backgroundColor = .clear
-        balanceCardView.containerView.frame = balanceCardView.frame
+//        balanceCardView.bottomAnchor.constraint(equalTo: collectionView.topAnchor, constant: -16).isActive = true
+        balanceCardView.bottomAnchor.constraint(equalTo: transactionContainerView.topAnchor, constant: 32).isActive = true
+        balanceCardView.containerView.sizeToFit()
+//        balanceCardView.containerView.frame = balanceCardView.frame
     }
     
     
@@ -127,7 +130,8 @@ extension DashboardViewController : UICollectionViewDataSource{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TransactionCell", for: indexPath) as! TransactionCell
         let dataPerDate = transactionsPerDate[indexPath.row]
         cell.setupData(transactionPerDate: dataPerDate)
-        cell.needsUpdateConstraints()
+        cell.setNeedsLayout()
+        cell.layoutIfNeeded()
         return cell
     }
 }

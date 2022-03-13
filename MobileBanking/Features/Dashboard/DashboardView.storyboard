@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-5a-9cp">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-5a-9cp">
                                 <rect key="frame" x="0.0" y="244" width="390" height="600"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0V-5P-JCe">
@@ -63,24 +63,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3bE-Yg-l57" customClass="BalanceCard" customModule="MobileBanking" customModuleProvider="target">
-                                <rect key="frame" x="16" y="76" width="358" height="136"/>
+                                <rect key="frame" x="16" y="68" width="358" height="221"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="3bE-Yg-l57" secondAttribute="height" multiplier="179:68" id="0na-Xr-Csn"/>
+                                    <constraint firstAttribute="height" constant="221" id="2go-XH-PGG"/>
+                                    <constraint firstAttribute="width" constant="345" id="Dfk-rf-TPx"/>
+                                    <constraint firstAttribute="width" secondItem="3bE-Yg-l57" secondAttribute="height" multiplier="358:189" id="JaR-re-eJJ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <constraints>
-                            <constraint firstItem="jwh-5a-9cp" firstAttribute="top" secondItem="3bE-Yg-l57" secondAttribute="bottom" constant="32" id="1tS-0f-iCe"/>
-                            <constraint firstItem="3bE-Yg-l57" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="4uX-Ax-J0N"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3bE-Yg-l57" secondAttribute="trailing" constant="16" id="B3f-30-tg8"/>
-                            <constraint firstItem="jwh-5a-9cp" firstAttribute="top" secondItem="3bE-Yg-l57" secondAttribute="bottom" constant="32" id="IDv-AT-raX"/>
-                            <constraint firstItem="3bE-Yg-l57" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NWC-rd-iTU"/>
                             <constraint firstItem="jwh-5a-9cp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Nwc-Z8-fMo"/>
-                            <constraint firstItem="3bE-Yg-l57" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="a5R-aL-prs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3bE-Yg-l57" secondAttribute="trailing" constant="16" id="aPm-Tz-bNZ"/>
                             <constraint firstAttribute="bottom" secondItem="jwh-5a-9cp" secondAttribute="bottom" id="bTc-e6-FDH"/>
+                            <constraint firstItem="3bE-Yg-l57" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="eJ9-YN-IfG"/>
+                            <constraint firstItem="3bE-Yg-l57" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="mBN-dL-Qgp"/>
                             <constraint firstItem="jwh-5a-9cp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qwK-TT-YnP"/>
                         </constraints>
                     </view>
@@ -93,7 +92,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+            <point key="canvasLocation" x="136.92307692307691" y="81.042654028436019"/>
         </scene>
     </scenes>
     <resources>

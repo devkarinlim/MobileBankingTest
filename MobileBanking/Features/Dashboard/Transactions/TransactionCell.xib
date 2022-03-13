@@ -21,17 +21,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUo-vE-qnj">
                         <rect key="frame" x="0.0" y="0.0" width="338" height="204"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XU4-HV-aVA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="254" bounces="NO" scrollEnabled="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" style="insetGrouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XU4-HV-aVA">
                                 <rect key="frame" x="0.0" y="0.0" width="338" height="204"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="XU4-HV-aVA" secondAttribute="trailing" id="Cjc-w6-Txr"/>
-                            <constraint firstItem="XU4-HV-aVA" firstAttribute="top" secondItem="ZUo-vE-qnj" secondAttribute="top" id="GkO-sK-zFC"/>
-                            <constraint firstAttribute="bottom" secondItem="XU4-HV-aVA" secondAttribute="bottom" id="HtR-i3-pq8"/>
-                            <constraint firstItem="XU4-HV-aVA" firstAttribute="leading" secondItem="ZUo-vE-qnj" secondAttribute="leading" id="cAA-cD-IND"/>
+                            <constraint firstItem="XU4-HV-aVA" firstAttribute="top" secondItem="ZUo-vE-qnj" secondAttribute="top" id="dNE-Te-HeX"/>
+                            <constraint firstAttribute="bottom" secondItem="XU4-HV-aVA" secondAttribute="bottom" id="f0j-Ld-GUt"/>
+                            <constraint firstItem="XU4-HV-aVA" firstAttribute="leading" secondItem="ZUo-vE-qnj" secondAttribute="leading" id="gCB-6a-2ue"/>
+                            <constraint firstAttribute="trailing" secondItem="XU4-HV-aVA" secondAttribute="trailing" id="u8V-Dd-NZn"/>
                         </constraints>
                     </view>
                 </subviews>
