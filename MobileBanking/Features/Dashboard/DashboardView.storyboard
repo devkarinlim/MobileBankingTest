@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="DashboardViewController" customModule="MobileBanking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-5a-9cp">
+                                <rect key="frame" x="0.0" y="244" width="390" height="600"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n0V-5P-JCe">
+                                        <rect key="frame" x="16" y="48" width="358" height="400"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="n0V-5P-JCe" secondAttribute="height" multiplier="179:200" id="XWf-6A-yNR"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="sIw-72-q8W"/>
+                                            <constraint firstAttribute="width" constant="358" id="tcr-Z5-mKE"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f93-se-tek">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zNe-4S-SNv">
+                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uYr-gz-oq9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </collectionViewCellContentView>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-0w-xLj">
+                                        <rect key="frame" x="16" y="480" width="358" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Na9-0w-xLj" secondAttribute="trailing" constant="16" id="4Kd-dQ-XTY"/>
+                                    <constraint firstItem="n0V-5P-JCe" firstAttribute="top" secondItem="jwh-5a-9cp" secondAttribute="top" constant="48" id="Urh-GT-3cM"/>
+                                    <constraint firstItem="Na9-0w-xLj" firstAttribute="top" secondItem="n0V-5P-JCe" secondAttribute="bottom" constant="32" id="X6J-gG-aiZ"/>
+                                    <constraint firstItem="Na9-0w-xLj" firstAttribute="leading" secondItem="jwh-5a-9cp" secondAttribute="leading" constant="16" id="cFA-T5-03D"/>
+                                    <constraint firstItem="n0V-5P-JCe" firstAttribute="leading" secondItem="jwh-5a-9cp" secondAttribute="leading" constant="16" id="hvT-vK-4hT"/>
+                                    <constraint firstAttribute="trailing" secondItem="n0V-5P-JCe" secondAttribute="trailing" constant="16" id="oPs-Iv-Oru"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3bE-Yg-l57" customClass="BalanceCard" customModule="MobileBanking" customModuleProvider="target">
+                                <rect key="frame" x="16" y="76" width="358" height="136"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3bE-Yg-l57" secondAttribute="height" multiplier="179:68" id="0na-Xr-Csn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="jwh-5a-9cp" firstAttribute="top" secondItem="3bE-Yg-l57" secondAttribute="bottom" constant="32" id="1tS-0f-iCe"/>
+                            <constraint firstItem="3bE-Yg-l57" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="4uX-Ax-J0N"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3bE-Yg-l57" secondAttribute="trailing" constant="16" id="B3f-30-tg8"/>
+                            <constraint firstItem="jwh-5a-9cp" firstAttribute="top" secondItem="3bE-Yg-l57" secondAttribute="bottom" constant="32" id="IDv-AT-raX"/>
+                            <constraint firstItem="3bE-Yg-l57" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="NWC-rd-iTU"/>
+                            <constraint firstItem="jwh-5a-9cp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Nwc-Z8-fMo"/>
+                            <constraint firstItem="3bE-Yg-l57" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="a5R-aL-prs"/>
+                            <constraint firstAttribute="bottom" secondItem="jwh-5a-9cp" secondAttribute="bottom" id="bTc-e6-FDH"/>
+                            <constraint firstItem="jwh-5a-9cp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qwK-TT-YnP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="balanceCardView" destination="3bE-Yg-l57" id="BnQ-is-wjp"/>
+                        <outlet property="collectionView" destination="n0V-5P-JCe" id="CdD-Im-EV6"/>
+                        <outlet property="transactionContainerView" destination="jwh-5a-9cp" id="5CU-0g-kiE"/>
+                        <outlet property="transferBtn" destination="Na9-0w-xLj" id="Zhz-MJ-Wbq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
