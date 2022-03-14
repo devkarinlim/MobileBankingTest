@@ -10,5 +10,5 @@ import Foundation
 struct SegueManager{
     static let DASHBOARD = "DashboardSegue"
     static let REGISTRATION = "RegistrationSegue"
-    
+    static let TRANSFER = "TransferSegue"
 }

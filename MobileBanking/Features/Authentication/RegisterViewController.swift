@@ -36,13 +36,6 @@ class RegisterViewController: UIViewController {
         setupForm()
         setupRegistrationBtn()
         initializeHideKeyboard()
-        testInput()
-    }
-    
-    func testInput(){
-        regUsernameField.text = "test"
-        passField.text = "asdasd"
-        passConfirmField.text = "asdasd"
     }
     
     func setupForm(){

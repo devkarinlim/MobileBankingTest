@@ -42,6 +42,8 @@
 		EEDEB2D227DE41B800B8CEAB /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */; };
 		EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */; };
 		EEDEB2D627DEAE9000B8CEAB /* RegisterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */; };
+		EEDEB2D927DEC08700B8CEAB /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D827DEC08700B8CEAB /* TransferViewController.swift */; };
+		EEDEB2DB27DEC09A00B8CEAB /* TransferView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterView.storyboard; sourceTree = "<group>"; };
+		EEDEB2D827DEC08700B8CEAB /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		EE274F9A27DC63F60057319A /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				EEDEB2D727DEC03C00B8CEAB /* Transfer */,
 				EE274FB427DC66BE0057319A /* Dashboard */,
 				EE274FA727DC65D30057319A /* Authentication */,
 			);
@@ -275,6 +280,15 @@
 				EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */,
 			);
 			path = TransactionDetail;
+			sourceTree = "<group>";
+		};
+		EEDEB2D727DEC03C00B8CEAB /* Transfer */ = {
+			isa = PBXGroup;
+			children = (
+				EEDEB2D827DEC08700B8CEAB /* TransferViewController.swift */,
+				EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */,
+			);
+			path = Transfer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +398,7 @@
 				EE27501427DDE57E0057319A /* BalanceCard.xib in Resources */,
 				EE274FCE27DCF4600057319A /* DashboardView.storyboard in Resources */,
 				EE274F7727DC54300057319A /* LaunchScreen.storyboard in Resources */,
+				EEDEB2DB27DEC09A00B8CEAB /* TransferView.storyboard in Resources */,
 				EE274F7427DC54300057319A /* Assets.xcassets in Resources */,
 				EE274F7227DC542F0057319A /* Main.storyboard in Resources */,
 				EE274FBF27DCAC7A0057319A /* LoginView.storyboard in Resources */,
@@ -429,6 +444,7 @@
 				EE274FF527DDC9830057319A /* TransactionModel.swift in Sources */,
 				EE274FD227DD8B220057319A /* Spinner.swift in Sources */,
 				EE274FD027DD89A40057319A /* BalanceModel.swift in Sources */,
+				EEDEB2D927DEC08700B8CEAB /* TransferViewController.swift in Sources */,
 				EE274F6B27DC542F0057319A /* AppDelegate.swift in Sources */,
 				EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */,
 				EE274FF727DDCC4C0057319A /* AccountModel.swift in Sources */,

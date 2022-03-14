@@ -18,12 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-5a-9cp">
-                                <rect key="frame" x="0.0" y="244" width="99" height="600"/>
+                                <rect key="frame" x="0.0" y="244" width="390" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-0w-xLj">
-                                        <rect key="frame" x="16" y="464" width="67" height="31"/>
+                                        <rect key="frame" x="16" y="464" width="358" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="transferBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8cm-s5-A2S"/>
+                                        </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Vko-6M-lHi">
                                         <rect key="frame" x="16" y="32" width="358" height="400"/>
@@ -44,7 +47,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3bE-Yg-l57" customClass="BalanceCard" customModule="MobileBanking" customModuleProvider="target">
-                                <rect key="frame" x="16" y="68" width="67" height="221"/>
+                                <rect key="frame" x="16" y="68" width="358" height="221"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="2go-XH-PGG"/>
@@ -70,11 +73,22 @@
                         <outlet property="tableView" destination="Vko-6M-lHi" id="3mK-re-k1t"/>
                         <outlet property="transactionContainerView" destination="jwh-5a-9cp" id="5CU-0g-kiE"/>
                         <outlet property="transferBtn" destination="Na9-0w-xLj" id="Zhz-MJ-Wbq"/>
+                        <segue destination="7cy-P0-5Da" kind="show" identifier="TransferSegue" id="1w9-fK-do7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.38461538461539" y="81.042654028436019"/>
+        </scene>
+        <!--TransferView-->
+        <scene sceneID="Pdh-FP-GjZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TransferView" id="7cy-P0-5Da" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O8e-7C-YOG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mey-jR-Ybc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="31"/>
         </scene>
     </scenes>
     <resources>

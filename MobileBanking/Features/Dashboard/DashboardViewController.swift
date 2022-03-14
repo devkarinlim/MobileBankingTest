@@ -128,6 +128,11 @@ class DashboardViewController: UIViewController {
             AlertHelper.shared.showError(title: "Balance Error", message: error, sender: self)
         }
     }
+    
+    @IBAction func transferBtnTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueManager.TRANSFER, sender: self)
+    }
+    
 }
 
 extension DashboardViewController : UITableViewDataSource{
