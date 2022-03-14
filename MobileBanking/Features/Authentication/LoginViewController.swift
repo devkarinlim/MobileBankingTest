@@ -24,7 +24,13 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        clearCache()
+    }
+    
+    func clearCache(){
         UserDefaults.standard.removeObject(forKey: UserDefaultKey.AUTH_TOKEN)
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.USERNAME)
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.ACCOUNT_NO)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -37,6 +43,7 @@ class LoginViewController: UIViewController {
         setupHeader()
         setupForm()
         setupLoginBtn()
+        setupRegistrationBtn()
         initializeHideKeyboard()
         testInput()
     }
@@ -50,10 +57,12 @@ class LoginViewController: UIViewController {
         usernameField.delegate = self
         passwordField.delegate = self
         usernameField.textContentType = .oneTimeCode
+        usernameField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         usernameField.tag = 1
         passwordField.tag = 2
         passwordField.isSecureTextEntry = true
         passwordField.textContentType = .oneTimeCode
+        passwordField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         clearValidLabels()
     }
     
@@ -70,22 +79,20 @@ class LoginViewController: UIViewController {
     }
     
     func setupLoginBtn(){
-        loginBtn.tintColor = .white
-        loginBtn.backgroundColor = .red
-        loginBtn.layer.cornerRadius = loginBtn.frame.height/5
+        loginBtn.setRoundedRed()
         loginBtn.setTitle(pageTitle, for: .normal)
-//        loginBtn.layer.padding = loginBtn.frame.height/5
     }
     
     func setupRegistrationBtn(){
-        
+        registBtn.setRoundedBorderRed()
+        registBtn.setTitle("REGISTER", for: .normal)
     }
     
     func setupHeader(){
         if let iconImage = UIImage(named: "logo_transparent"){
             imageView.image = iconImage
         }
-        titleLabel.text = pageTitle
+        titleLabel.text = pageTitle.capitalized
     }
 
     @IBAction func loginBtnTapped(_ sender: Any) {
@@ -99,6 +106,7 @@ class LoginViewController: UIViewController {
             AuthenticationApi.login(userData: authUser) { response in
                 UserDefaults.standard.set(response.token, forKey: UserDefaultKey.AUTH_TOKEN)
                 UserDefaults.standard.set(self.username, forKey: UserDefaultKey.USERNAME)
+                UserDefaults.standard.set(response.accountNo, forKey: UserDefaultKey.ACCOUNT_NO)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: SegueManager.DASHBOARD, sender: self)
                 }
@@ -127,6 +135,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func regBtnTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueManager.REGISTRATION, sender: self)
     }
     
     func initializeHideKeyboard(){
@@ -155,3 +164,4 @@ extension LoginViewController: UITextFieldDelegate{
     
     
 }
+

@@ -15,11 +15,12 @@ struct TransactionResponse: Codable{
 
 struct TransactionData: Codable{
     var transactionId: String
-    var amount: Float
+    var amount: Double
     var transactionDate: String
     var description: String?
     var transactionType: String
-    var receipient: AccountData
+    var receipient: AccountData?
+    var sender: AccountData?
 }
 
 struct TransactionPerDate{

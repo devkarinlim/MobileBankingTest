@@ -36,25 +36,25 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SGD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bge-3J-bfy">
-                            <rect key="frame" x="16" y="52" width="313" height="34"/>
+                            <rect key="frame" x="16" y="48" width="313" height="34"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Account No." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mFC-JS-JYX">
-                            <rect key="frame" x="16" y="102" width="313" height="18"/>
+                            <rect key="frame" x="16" y="94" width="313" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yz-qO-Nka">
-                            <rect key="frame" x="16" y="128" width="313" height="20.666666666666657"/>
+                            <rect key="frame" x="16" y="120.00000000000001" width="313" height="20.666666666666671"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Holder Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNr-lo-p62">
-                            <rect key="frame" x="16" y="164.66666666666666" width="313" height="20.333333333333343"/>
+                            <rect key="frame" x="16" y="156.66666666666666" width="313" height="20.333333333333343"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -66,11 +66,11 @@
                         <constraint firstItem="WNr-lo-p62" firstAttribute="top" secondItem="8yz-qO-Nka" secondAttribute="bottom" constant="16" id="Fno-bm-lMN"/>
                         <constraint firstItem="WNr-lo-p62" firstAttribute="trailing" secondItem="8yz-qO-Nka" secondAttribute="trailing" id="HKy-uN-jC5"/>
                         <constraint firstItem="8yz-qO-Nka" firstAttribute="trailing" secondItem="hSq-uQ-V0O" secondAttribute="trailing" id="IZQ-ov-NNP"/>
-                        <constraint firstItem="bge-3J-bfy" firstAttribute="top" secondItem="hSq-uQ-V0O" secondAttribute="bottom" constant="16" id="MSh-Ur-AqL"/>
+                        <constraint firstItem="bge-3J-bfy" firstAttribute="top" secondItem="hSq-uQ-V0O" secondAttribute="bottom" constant="12" id="MSh-Ur-AqL"/>
                         <constraint firstItem="hSq-uQ-V0O" firstAttribute="top" secondItem="dCV-98-QI5" secondAttribute="top" constant="16" id="MkH-iA-LQt"/>
                         <constraint firstItem="bge-3J-bfy" firstAttribute="trailing" secondItem="hSq-uQ-V0O" secondAttribute="trailing" id="Oqs-Xf-lLF"/>
                         <constraint firstItem="8yz-qO-Nka" firstAttribute="top" secondItem="mFC-JS-JYX" secondAttribute="bottom" constant="8" id="QEL-Ah-UqJ"/>
-                        <constraint firstItem="mFC-JS-JYX" firstAttribute="top" secondItem="bge-3J-bfy" secondAttribute="bottom" constant="16" id="Qhi-UO-9vV"/>
+                        <constraint firstItem="mFC-JS-JYX" firstAttribute="top" secondItem="bge-3J-bfy" secondAttribute="bottom" constant="12" id="Qhi-UO-9vV"/>
                         <constraint firstItem="WNr-lo-p62" firstAttribute="leading" secondItem="8yz-qO-Nka" secondAttribute="leading" id="hE7-DA-fhN"/>
                         <constraint firstItem="bge-3J-bfy" firstAttribute="leading" secondItem="hSq-uQ-V0O" secondAttribute="leading" id="qtT-1R-SQ7"/>
                         <constraint firstAttribute="trailing" secondItem="hSq-uQ-V0O" secondAttribute="trailing" constant="16" id="sSe-SJ-jxy"/>
