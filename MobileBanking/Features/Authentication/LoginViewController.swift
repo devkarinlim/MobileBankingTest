@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
     
     func setupRegistrationBtn(){
         registBtn.setRoundedBorderRed()
-        registBtn.setTitle("REGISTRATION", for: .normal)
+        registBtn.setTitle("REGISTER", for: .normal)
     }
     
     func setupHeader(){
@@ -129,6 +129,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func regBtnTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueManager.REGISTRATION, sender: self)
     }
     
     func initializeHideKeyboard(){

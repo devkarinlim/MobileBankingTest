@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwh-5a-9cp">
-                                <rect key="frame" x="0.0" y="244" width="390" height="600"/>
+                                <rect key="frame" x="0.0" y="244" width="99" height="600"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na9-0w-xLj">
-                                        <rect key="frame" x="16" y="464" width="358" height="31"/>
+                                        <rect key="frame" x="16" y="464" width="67" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                     </button>
@@ -44,7 +44,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3bE-Yg-l57" customClass="BalanceCard" customModule="MobileBanking" customModuleProvider="target">
-                                <rect key="frame" x="16" y="68" width="358" height="221"/>
+                                <rect key="frame" x="16" y="68" width="67" height="221"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="2go-XH-PGG"/>

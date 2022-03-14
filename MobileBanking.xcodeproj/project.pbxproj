@@ -23,7 +23,6 @@
 		EE274FBF27DCAC7A0057319A /* LoginView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE274FBE27DCAC7A0057319A /* LoginView.storyboard */; };
 		EE274FC127DCAD9A0057319A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FC027DCAD9A0057319A /* LoginViewController.swift */; };
 		EE274FCA27DCD5870057319A /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FC927DCD5870057319A /* AuthenticationModel.swift */; };
-		EE274FCC27DCF4080057319A /* RegistrationView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE274FCB27DCF4080057319A /* RegistrationView.storyboard */; };
 		EE274FCE27DCF4600057319A /* DashboardView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE274FCD27DCF4600057319A /* DashboardView.storyboard */; };
 		EE274FD027DD89A40057319A /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FCF27DD89A40057319A /* BalanceModel.swift */; };
 		EE274FD227DD8B220057319A /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FD127DD8B220057319A /* Spinner.swift */; };
@@ -36,14 +35,13 @@
 		EE274FF527DDC9830057319A /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FF427DDC9830057319A /* TransactionModel.swift */; };
 		EE274FF727DDCC4C0057319A /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FF627DDCC4C0057319A /* AccountModel.swift */; };
 		EE274FFC27DDD0740057319A /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE274FFB27DDD0740057319A /* AlertHelper.swift */; };
-		EE27500527DDE3060057319A /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27500327DDE3060057319A /* TransactionCell.swift */; };
-		EE27500627DDE3060057319A /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE27500427DDE3060057319A /* TransactionCell.xib */; };
 		EE27500C27DDE3D30057319A /* BalanceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27500B27DDE3D30057319A /* BalanceCard.swift */; };
 		EE27501427DDE57E0057319A /* BalanceCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE27501327DDE57E0057319A /* BalanceCard.xib */; };
 		EEDEB2CF27DE3DA500B8CEAB /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */; };
 		EEDEB2D027DE3DA500B8CEAB /* TransactionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */; };
 		EEDEB2D227DE41B800B8CEAB /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */; };
 		EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */; };
+		EEDEB2D627DEAE9000B8CEAB /* RegisterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +82,6 @@
 		EE274FBE27DCAC7A0057319A /* LoginView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginView.storyboard; sourceTree = "<group>"; };
 		EE274FC027DCAD9A0057319A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EE274FC927DCD5870057319A /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
-		EE274FCB27DCF4080057319A /* RegistrationView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationView.storyboard; sourceTree = "<group>"; };
 		EE274FCD27DCF4600057319A /* DashboardView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardView.storyboard; sourceTree = "<group>"; };
 		EE274FCF27DD89A40057319A /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		EE274FD127DD8B220057319A /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
@@ -97,14 +94,13 @@
 		EE274FF427DDC9830057319A /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		EE274FF627DDCC4C0057319A /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		EE274FFB27DDD0740057319A /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
-		EE27500327DDE3060057319A /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
-		EE27500427DDE3060057319A /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		EE27500B27DDE3D30057319A /* BalanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCard.swift; sourceTree = "<group>"; };
 		EE27501327DDE57E0057319A /* BalanceCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCard.xib; sourceTree = "<group>"; };
 		EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
 		EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailCell.xib; sourceTree = "<group>"; };
 		EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,8 +209,8 @@
 			children = (
 				EE274FBE27DCAC7A0057319A /* LoginView.storyboard */,
 				EE274FC027DCAD9A0057319A /* LoginViewController.swift */,
+				EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */,
 				EE274FB627DC66EF0057319A /* RegisterViewController.swift */,
-				EE274FCB27DCF4080057319A /* RegistrationView.storyboard */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -268,8 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				EEDEB2C827DE387000B8CEAB /* TransactionDetail */,
-				EE27500327DDE3060057319A /* TransactionCell.swift */,
-				EE27500427DDE3060057319A /* TransactionCell.xib */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -392,10 +386,9 @@
 				EE274F7727DC54300057319A /* LaunchScreen.storyboard in Resources */,
 				EE274F7427DC54300057319A /* Assets.xcassets in Resources */,
 				EE274F7227DC542F0057319A /* Main.storyboard in Resources */,
-				EE274FCC27DCF4080057319A /* RegistrationView.storyboard in Resources */,
 				EE274FBF27DCAC7A0057319A /* LoginView.storyboard in Resources */,
+				EEDEB2D627DEAE9000B8CEAB /* RegisterView.storyboard in Resources */,
 				EEDEB2D027DE3DA500B8CEAB /* TransactionDetailCell.xib in Resources */,
-				EE27500627DDE3060057319A /* TransactionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +431,6 @@
 				EE274FD027DD89A40057319A /* BalanceModel.swift in Sources */,
 				EE274F6B27DC542F0057319A /* AppDelegate.swift in Sources */,
 				EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */,
-				EE27500527DDE3060057319A /* TransactionCell.swift in Sources */,
 				EE274FF727DDCC4C0057319A /* AccountModel.swift in Sources */,
 				EE274FCA27DCD5870057319A /* AuthenticationModel.swift in Sources */,
 				EE274FE227DDAA9E0057319A /* UserDefaultKey.swift in Sources */,
