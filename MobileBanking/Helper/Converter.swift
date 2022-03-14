@@ -23,11 +23,14 @@ struct Converter{
         return ""
     }
     
-    static func formatToCurrency(_ amount: Double) -> String{
+    static func formatToCurrency(_ amount: Double, isShowSymbol: Bool) -> String{
         let number = NSNumber(value: amount)
         let formatter = NumberFormatter()
         formatter.numberStyle = .currencyAccounting
         formatter.currencySymbol = "SGD"
+        if !isShowSymbol{
+            formatter.currencySymbol = ""
+        }
         formatter.locale = Locale(identifier: "en_SG")
         return formatter.string(from: number) ?? ""
     }

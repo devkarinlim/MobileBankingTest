@@ -136,7 +136,7 @@ class TransferViewController: UIViewController {
     func constructMessage()->String{
         let senderNo = UserDefaults.standard.string(forKey: UserDefaultKey.ACCOUNT_NO)
         let receipientNo = transferData?.receipientAccountNo
-        let amountWithCurrency = Converter.formatToCurrency(Double(transferData?.amount ?? 0))
+        let amountWithCurrency = Converter.formatToCurrency(Double(transferData?.amount ?? 0), isShowSymbol: true)
         let description = transferData?.description ?? ""
         return "FR \(senderNo!)\n"+"TO \(receipientNo!)\n"+"\(amountWithCurrency)\n"+"\(description)"
     }

@@ -18,13 +18,16 @@ class DashboardViewController: UIViewController {
     var balance: BalanceData?
     var transactionsPerDate: [TransactionPerDate] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchBalance()
+        fetchTransactions()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
         setupTransactionContainer()
         setupBalanceCard()
-        fetchBalance()
-        fetchTransactions()
         setupTransferBtn()
         setupTableView()
     }

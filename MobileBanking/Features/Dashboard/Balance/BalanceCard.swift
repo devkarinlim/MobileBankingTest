@@ -51,7 +51,7 @@ class BalanceCard: UIView {
     }
     
     public func setBalanceAmount(_ balance: Double){
-        balanceAmount.text = Converter.formatToCurrency(balance)
+        balanceAmount.text = Converter.formatToCurrency(balance, isShowSymbol: true)
     }
     
     public func setAccountNo(_ accountNo: String){
