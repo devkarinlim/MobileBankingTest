@@ -17,7 +17,7 @@ class TransactionApi: NSObject{
                     successCompletion(transactionResponse.data)
                 }
                 else{
-//                    failCompletion(transactionResponse.error?.message ?? "Unknown Error")
+                    failCompletion(transactionResponse.error?.message ?? "Unknown Error")
                 }
             }
             catch let error{
@@ -26,6 +26,6 @@ class TransactionApi: NSObject{
         } failCompletion: { error in
             failCompletion(error)
         }
-
     }
+    
 }

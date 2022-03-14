@@ -21,14 +21,12 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
-//        setupCollectionView()
         setupTransactionContainer()
         setupBalanceCard()
         fetchBalance()
         fetchTransactions()
         setupTransferBtn()
         setupTableView()
-        // Do any additional setup after loading the view.
     }
     
     func setupTableView(){
@@ -80,8 +78,19 @@ class DashboardViewController: UIViewController {
     
     func setupNavBar(){
         navigationItem.hidesBackButton = true
-        let logOutBtn = UIBarButtonItem(title: "LOGOUT", style: .done, target: self, action: #selector(logoutTapped))
-        navigationItem.setRightBarButton(logOutBtn, animated: true)
+//        let logOutBtn = UIBarButtonItem(title: "LOGOUT", style: .done, target: self, action: #selector(logoutTapped))
+        let logOutBtn = UIButton(type: .custom)
+        logOutBtn.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
+        logOutBtn.setTitleColor(.red, for: .normal)
+        logOutBtn.setTitle("LOGOUT", for: .normal)
+        let paddingBtn: CGFloat = 16
+        logOutBtn.contentEdgeInsets = UIEdgeInsets(top: paddingBtn, left: paddingBtn, bottom: paddingBtn, right: paddingBtn)
+        logOutBtn.backgroundColor = .white
+        logOutBtn.layer.borderColor = UIColor(named: "red")?.cgColor
+        logOutBtn.layer.borderWidth = 2
+        logOutBtn.layer.cornerRadius = 22
+        let barButton = UIBarButtonItem(customView: logOutBtn)
+        navigationItem.setRightBarButton(barButton, animated: true)
         navigationItem.rightBarButtonItem?.tintColor = .black
     }
     
@@ -104,7 +113,7 @@ class DashboardViewController: UIViewController {
     func groupPerDate(datas: [TransactionData])->[TransactionPerDate]{
         var results: [TransactionPerDate] = []
         datas.forEach { data in
-            let dateString = DateHelper.getFormattedDate(dateString: data.transactionDate, format: "dd MMM yyyy")
+            let dateString = Converter.getFormattedDate(dateString: data.transactionDate, format: "dd MMM yyyy")
             if let idx = results.firstIndex(where: {$0.formattedDate == dateString}){
                 results[idx].detail.append(data)
             }

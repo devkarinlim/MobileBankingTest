@@ -51,7 +51,7 @@ class BalanceCard: UIView {
     }
     
     public func setBalanceAmount(_ balance: Double){
-        balanceAmount.text = "SGD " + String(format: "%.2f", balance)
+        balanceAmount.text = Converter.formatToCurrency(balance)
     }
     
     public func setAccountNo(_ accountNo: String){

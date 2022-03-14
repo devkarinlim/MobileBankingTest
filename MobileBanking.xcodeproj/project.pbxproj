@@ -39,11 +39,12 @@
 		EE27501427DDE57E0057319A /* BalanceCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE27501327DDE57E0057319A /* BalanceCard.xib */; };
 		EEDEB2CF27DE3DA500B8CEAB /* TransactionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */; };
 		EEDEB2D027DE3DA500B8CEAB /* TransactionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */; };
-		EEDEB2D227DE41B800B8CEAB /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */; };
+		EEDEB2D227DE41B800B8CEAB /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D127DE41B800B8CEAB /* Converter.swift */; };
 		EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */; };
 		EEDEB2D627DEAE9000B8CEAB /* RegisterView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */; };
 		EEDEB2D927DEC08700B8CEAB /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2D827DEC08700B8CEAB /* TransferViewController.swift */; };
 		EEDEB2DB27DEC09A00B8CEAB /* TransferView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */; };
+		EEDEB2DF27DEF98000B8CEAB /* TransferModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDEB2DE27DEF98000B8CEAB /* TransferModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +101,12 @@
 		EE27501327DDE57E0057319A /* BalanceCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BalanceCard.xib; sourceTree = "<group>"; };
 		EEDEB2CD27DE3DA500B8CEAB /* TransactionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailCell.swift; sourceTree = "<group>"; };
 		EEDEB2CE27DE3DA500B8CEAB /* TransactionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionDetailCell.xib; sourceTree = "<group>"; };
-		EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		EEDEB2D127DE41B800B8CEAB /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		EEDEB2D527DEAE9000B8CEAB /* RegisterView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterView.storyboard; sourceTree = "<group>"; };
 		EEDEB2D827DEC08700B8CEAB /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransferView.storyboard; sourceTree = "<group>"; };
+		EEDEB2DE27DEF98000B8CEAB /* TransferModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		EE274F6927DC542F0057319A /* MobileBanking */ = {
 			isa = PBXGroup;
 			children = (
+				EEDEB2E027DF021200B8CEAB /* Constant */,
 				EE274FC227DCB67E0057319A /* Model */,
 				EE274FBA27DC67F20057319A /* Helper */,
 				EE274F9B27DC64110057319A /* Services */,
@@ -234,11 +237,9 @@
 		EE274FBA27DC67F20057319A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				EE274FDF27DDA5790057319A /* SegueManager.swift */,
-				EE274FE127DDAA9E0057319A /* UserDefaultKey.swift */,
 				EE274FFB27DDD0740057319A /* AlertHelper.swift */,
 				EE274FD127DD8B220057319A /* Spinner.swift */,
-				EEDEB2D127DE41B800B8CEAB /* DateHelper.swift */,
+				EEDEB2D127DE41B800B8CEAB /* Converter.swift */,
 				EEDEB2D327DE9DE600B8CEAB /* ButtonExtension.swift */,
 			);
 			path = Helper;
@@ -251,6 +252,7 @@
 				EE274FCF27DD89A40057319A /* BalanceModel.swift */,
 				EE274FF427DDC9830057319A /* TransactionModel.swift */,
 				EE274FF627DDCC4C0057319A /* AccountModel.swift */,
+				EEDEB2DE27DEF98000B8CEAB /* TransferModel.swift */,
 				EE274FD727DD93130057319A /* ErrorResponse.swift */,
 			);
 			path = Model;
@@ -289,6 +291,15 @@
 				EEDEB2DA27DEC09A00B8CEAB /* TransferView.storyboard */,
 			);
 			path = Transfer;
+			sourceTree = "<group>";
+		};
+		EEDEB2E027DF021200B8CEAB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				EE274FDF27DDA5790057319A /* SegueManager.swift */,
+				EE274FE127DDAA9E0057319A /* UserDefaultKey.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +448,7 @@
 				EE274FB827DC66EF0057319A /* RegisterViewController.swift in Sources */,
 				EE274FD627DD911E0057319A /* TransactionApi.swift in Sources */,
 				EE274F9E27DC645D0057319A /* BaseApi.swift in Sources */,
-				EEDEB2D227DE41B800B8CEAB /* DateHelper.swift in Sources */,
+				EEDEB2D227DE41B800B8CEAB /* Converter.swift in Sources */,
 				EE274FDC27DD99570057319A /* DashboardViewController.swift in Sources */,
 				EE274FA627DC659D0057319A /* TransferApi.swift in Sources */,
 				EEDEB2CF27DE3DA500B8CEAB /* TransactionDetailCell.swift in Sources */,
@@ -448,6 +459,7 @@
 				EE274F6B27DC542F0057319A /* AppDelegate.swift in Sources */,
 				EEDEB2D427DE9DE600B8CEAB /* ButtonExtension.swift in Sources */,
 				EE274FF727DDCC4C0057319A /* AccountModel.swift in Sources */,
+				EEDEB2DF27DEF98000B8CEAB /* TransferModel.swift in Sources */,
 				EE274FCA27DCD5870057319A /* AuthenticationModel.swift in Sources */,
 				EE274FE227DDAA9E0057319A /* UserDefaultKey.swift in Sources */,
 				EE274FFC27DDD0740057319A /* AlertHelper.swift in Sources */,

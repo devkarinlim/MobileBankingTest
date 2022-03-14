@@ -27,5 +27,4 @@ struct AuthenticationResponse: Codable{
     var accountNo: String?
     var error: String?
     
-    
 }

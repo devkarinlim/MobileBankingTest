@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DateHelper{
+struct Converter{
     static func getFormattedDate(dateString: String, format: String) -> String {
         if dateString == ""{ return dateString}
         
@@ -21,5 +21,14 @@ struct DateHelper{
             return dateFormatterPrint.string(from: date)
         }
         return ""
+    }
+    
+    static func formatToCurrency(_ amount: Double) -> String{
+        let number = NSNumber(value: amount)
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currencyAccounting
+        formatter.currencySymbol = "SGD"
+        formatter.locale = Locale(identifier: "en_SG")
+        return formatter.string(from: number) ?? ""
     }
 }

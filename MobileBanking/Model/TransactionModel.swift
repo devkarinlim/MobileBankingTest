@@ -19,7 +19,8 @@ struct TransactionData: Codable{
     var transactionDate: String
     var description: String?
     var transactionType: String
-    var receipient: AccountData
+    var receipient: AccountData?
+    var sender: AccountData?
 }
 
 struct TransactionPerDate{

@@ -25,9 +25,17 @@ class TransactionDetailCell: UITableViewCell {
     func setupData(detail: TransactionData){
         let amount = String(format: "%.2f", detail.amount)
         let isTransfer = detail.transactionType == TransactionType.TRANSFER.rawValue ? true : false
+        if isTransfer{
+            accountHolderLbl.text = detail.receipient?.accountHolder
+            accountNoLbl.text = detail.receipient?.accountNo
+        }
+        else{
+            accountHolderLbl.text = detail.sender?.accountHolder
+            accountNoLbl.text = detail.sender?.accountNo
+        }
         amountLbl.text = isTransfer ? "- " + "\(amount)" : "\(amount)"
         amountLbl.textColor = isTransfer  ? .darkGray : .systemGreen
-        accountHolderLbl.text = detail.receipient.accountHolder
-        accountNoLbl.text = detail.receipient.accountNo
+        
+        
     }
 }
