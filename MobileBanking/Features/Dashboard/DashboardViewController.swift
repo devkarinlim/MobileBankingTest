@@ -65,7 +65,6 @@ class DashboardViewController: UIViewController {
         balanceCardView.backgroundColor = .clear
         balanceCardView.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: -16).isActive = true
         balanceCardView.bottomAnchor.constraint(equalTo: transactionContainerView.topAnchor, constant: 32).isActive = true
-//        balanceCardView.containerView.frame = balanceCardView.frame
     }
     
     func createLayout()->UICollectionViewLayout{
@@ -81,7 +80,6 @@ class DashboardViewController: UIViewController {
     
     func setupNavBar(){
         navigationItem.hidesBackButton = true
-//        let logOutBtn = UIBarButtonItem(title: "LOGOUT", style: .done, target: self, action: #selector(logoutTapped))
         let logOutBtn = UIButton(type: .custom)
         logOutBtn.addTarget(self, action: #selector(logoutTapped), for: .touchUpInside)
         logOutBtn.setTitleColor(.red, for: .normal)

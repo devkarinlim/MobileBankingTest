@@ -31,8 +31,6 @@ class BalanceCard: UIView {
     
     private func setupView() {
         Bundle.main.loadNibNamed("BalanceCard", owner: self, options: nil)
-        
-//        containerView.translatesAutoresizingMaskIntoConstraints = true
         containerView.layer.cornerRadius = 24
         containerView.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleBottomMargin]
         
