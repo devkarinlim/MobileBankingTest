@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transfer View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="TransferViewController" customModule="MobileBanking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kc-RR-ocG">
+                                <rect key="frame" x="16" y="60" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LCk-Cm-KyA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nSn-Xg-FXl">
+                                <rect key="frame" x="16" y="126" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kxr-oD-Z9s"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7M7-lm-adD">
+                                <rect key="frame" x="16" y="192" width="358" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="lin-nd-Mjb"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p28-J6-aei">
+                                <rect key="frame" x="16" y="747" width="358" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="transferBtnTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="66Y-aY-GPU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nSn-Xg-FXl" firstAttribute="trailing" secondItem="0kc-RR-ocG" secondAttribute="trailing" id="31G-ik-mfY"/>
+                            <constraint firstItem="0kc-RR-ocG" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="B2u-76-Xu5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="p28-J6-aei" secondAttribute="trailing" constant="16" id="GbI-N9-JGh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0kc-RR-ocG" secondAttribute="trailing" constant="16" id="Op0-2H-Id5"/>
+                            <constraint firstItem="0kc-RR-ocG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="QDu-Nz-vNU"/>
+                            <constraint firstItem="7M7-lm-adD" firstAttribute="leading" secondItem="nSn-Xg-FXl" secondAttribute="leading" id="bYL-4E-pay"/>
+                            <constraint firstItem="7M7-lm-adD" firstAttribute="top" secondItem="nSn-Xg-FXl" secondAttribute="bottom" constant="16" id="dNy-q8-UDR"/>
+                            <constraint firstItem="p28-J6-aei" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="eRG-n1-ufs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="p28-J6-aei" secondAttribute="bottom" constant="32" id="f8O-IM-wQm"/>
+                            <constraint firstItem="7M7-lm-adD" firstAttribute="trailing" secondItem="nSn-Xg-FXl" secondAttribute="trailing" id="gU7-dr-Tlh"/>
+                            <constraint firstItem="nSn-Xg-FXl" firstAttribute="leading" secondItem="0kc-RR-ocG" secondAttribute="leading" id="jQ3-bE-WOo"/>
+                            <constraint firstItem="nSn-Xg-FXl" firstAttribute="top" secondItem="0kc-RR-ocG" secondAttribute="bottom" constant="16" id="s7B-7x-3kJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountField" destination="nSn-Xg-FXl" id="xC0-gS-mZv"/>
+                        <outlet property="descriptionField" destination="7M7-lm-adD" id="GAu-Hn-mqo"/>
+                        <outlet property="recipientField" destination="0kc-RR-ocG" id="Vsq-49-iMH"/>
+                        <outlet property="transferBtn" destination="p28-J6-aei" id="tXD-Mt-X5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

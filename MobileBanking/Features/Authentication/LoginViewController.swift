@@ -24,8 +24,13 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        clearCache()
+    }
+    
+    func clearCache(){
         UserDefaults.standard.removeObject(forKey: UserDefaultKey.AUTH_TOKEN)
         UserDefaults.standard.removeObject(forKey: UserDefaultKey.USERNAME)
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.ACCOUNT_NO)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,7 +85,7 @@ class LoginViewController: UIViewController {
     
     func setupRegistrationBtn(){
         registBtn.setRoundedBorderRed()
-        registBtn.setTitle("REGISTRATION", for: .normal)
+        registBtn.setTitle("REGISTER", for: .normal)
     }
     
     func setupHeader(){
@@ -101,6 +106,7 @@ class LoginViewController: UIViewController {
             AuthenticationApi.login(userData: authUser) { response in
                 UserDefaults.standard.set(response.token, forKey: UserDefaultKey.AUTH_TOKEN)
                 UserDefaults.standard.set(self.username, forKey: UserDefaultKey.USERNAME)
+                UserDefaults.standard.set(response.accountNo, forKey: UserDefaultKey.ACCOUNT_NO)
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: SegueManager.DASHBOARD, sender: self)
                 }
@@ -129,6 +135,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func regBtnTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: SegueManager.REGISTRATION, sender: self)
     }
     
     func initializeHideKeyboard(){

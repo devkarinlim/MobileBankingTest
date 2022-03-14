@@ -10,7 +10,14 @@ import UIKit
 
 extension UIButton{
     func setRoundedStyle(){
-        self.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        var constraint = 50
+        if #available(iOS 10, *){
+            
+        }
+        else{
+            constraint = 30
+        }
+        self.heightAnchor.constraint(equalToConstant: CGFloat(constraint)).isActive = true
         self.layer.cornerRadius = 25
     }
     
