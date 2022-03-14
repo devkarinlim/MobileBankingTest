@@ -129,7 +129,7 @@ class TransferViewController: UIViewController {
     }
     
     func fillData(){
-        transferData?.amount = Double(amountField.text ?? "")!
+        transferData?.amount = Double(amountField.text ?? "") ?? 0
         transferData?.description = descriptionField.text ?? ""
     }
     

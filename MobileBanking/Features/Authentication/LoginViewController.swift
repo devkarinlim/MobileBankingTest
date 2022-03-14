@@ -45,12 +45,6 @@ class LoginViewController: UIViewController {
         setupLoginBtn()
         setupRegistrationBtn()
         initializeHideKeyboard()
-        testInput()
-    }
-    
-    func testInput(){
-        usernameField.text = "test"
-        passwordField.text = "asdasd"
     }
     
     func setupForm(){
