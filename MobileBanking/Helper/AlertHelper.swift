@@ -39,7 +39,7 @@ class AlertHelper{
     }
     
     func showSuccessLeft(title: String, message: String, sender: UIViewController, confirmHandler: @escaping()->Void){
-        let alert = UIAlertController(title: title, message: "\(message.capitalized)", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: "\(message)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             confirmHandler()
         }))

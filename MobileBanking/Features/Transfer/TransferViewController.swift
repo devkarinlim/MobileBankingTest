@@ -110,6 +110,7 @@ class TransferViewController: UIViewController {
     
     func sendTransfer(){
         if let data = transferData{
+            showSpinner(onView: view)
             TransferApi.saveTransfer(data: data) { response in
                 DispatchQueue.main.async {
                     self.processProof(data: response)
